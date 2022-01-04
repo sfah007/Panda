@@ -1,0 +1,121 @@
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  padding: 2rem 3rem;
+  color: $color-black;
+  .logo {
+    margin-left:1rem;
+    cursor: pointer;
+    
+    svg{
+      height:4rem;
+      width:4rem;
+      transform:scale(3);
+      fill:$color-black;
+      
+      
+    }
+  }
+  &__list {
+    display: flex;
+    // padding:1rem 3rem;
+    justify-content: space-around;
+    align-items: center;
+    transition: 0.5s all linear;
+    @include respond(tab-land) {
+      display: none;
+      position: fixed;
+      bottom: 0;
+      width: 100%;
+      top: 0;
+      left: 100%;
+      z-index: 9;
+      
+    }
+
+    &.open {
+     @include respond(tab-land){
+         display: flex;
+         flex-direction: column;
+         justify-content: center;
+         align-items: center;
+         transform:translateX(-100%);
+         background-color: $color-white;
+
+     }
+
+    }
+  }
+  &__item {
+    margin: auto 1rem;
+  }
+  &__link {
+    padding: 1rem 2rem;
+    font-size: 1.6rem;
+    display: inline-block;
+    color: $color-black;
+  }
+  &__toggle {
+    @include respond(tab-land) {
+      display: inline-block;
+      z-index: 10;
+    }
+    display: none;
+    width: 3rem;
+    height: 0.4rem;
+    background: $color-black;
+    margin-left: 2rem;
+    border-radius: $border-radius;
+    position: relative;
+    cursor: pointer;
+
+    &::before {
+      content: "";
+      position: absolute;
+      height: 100%;
+      width: 100%;
+      background: $color-black;
+      top: -0.7rem;
+      left: 0;
+      border-radius: $border-radius;
+      visibility: visible;
+    }
+    &::after {
+      content: "";
+      position: absolute;
+      height: 100%;
+      width: 100%;
+      background: $color-black;
+      top: 0.7rem;
+      left: 0;
+      border-radius: $border-radius;
+      visibility: visible;
+      transition: all 1s cubic-bezier(0.13, 1.83, 0.27, 1.85);
+    }
+    &.open {
+      visibility: hidden;
+      &::before {
+        top: 0;
+        transform: rotateZ(405deg);
+      }
+      &::after {
+        top: 0.1rem;
+        transform: rotateZ(315deg);
+      }
+    }
+  }
+}
+
+.ar{
+  nav{
+    .logo{
+      margin-right:1rem;
+    }
+    .lang-switcher{
+      margin-left: 1rem;
+      margin-right:auto;
+    }
+  }
+}

@@ -1,0 +1,103 @@
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  box-sizing: border-box;
+  font-size: 62.5%;
+  @include respond(tab-land) {
+    // width < 1200?
+    font-size: 56.25%; //1 rem = 9px, 9/16 = 50%
+  }
+
+  @include respond(tab-port) {
+    // width < 900?
+    font-size: 50%; //1 rem = 8px, 8/16 = 50%
+  }
+
+  @include respond(big-desktop) {
+    font-size: 75%; //1rem = 12, 12/16
+  }
+}
+body {
+  text-align: center;
+  background-color: $color-white;
+  font-family: "Poppins", sans-serif;
+  scroll-behavior: smooth;
+  color: $color-black;
+  // overflow: hidden;
+  &.ar{
+    font-family: "Cairo";
+  }
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+// .container{
+//     position: relative;
+//     overflow: hidden;
+// }
+::-webkit-scrollbar {
+  width: 15px;
+}
+
+::-webkit-scrollbar-track {
+  // border: 1px solid rgb(209, 0, 0);
+  // box-shadow: inset 0 0 10 rgb(255, 12, 12);
+  background-color: $color-black;
+}
+::-webkit-scrollbar-thumb {
+  border-radius: 20px;
+  background: $color-white;
+  border: 3px solid $color-black;
+}
+.cursor {
+  position: fixed;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: white;
+  mix-blend-mode: difference;
+  // transition: 0.1s;
+  transform: translate(-50%, -50%);
+  z-index: 10;
+  pointer-events: none;
+  @include respond(tab-port){
+    display: none;
+  }
+}
+
+section,
+footer {
+  background: $color-white;
+}
+.spacer {
+  // background: url("/imgs/layered-waves-haikei.svg");
+  aspect-ratio: 960/300;
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 100%;
+  background-size: cover;
+}
+
+.float {
+  transition: all 0.5s ease-in-out;
+  position: fixed !important;
+  // transform: translate(50%,500%);
+
+  // transform: scale(3);
+  bottom: 5rem;
+  right: 5rem;
+
+  background-color: red !important;
+}

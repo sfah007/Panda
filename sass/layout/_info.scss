@@ -1,0 +1,31 @@
+.info{
+    padding:5rem 3rem;
+    &__heading{
+        font-size: 3rem;
+        margin:4rem auto;
+    }
+    &__item{
+        margin:auto 1rem;
+    }
+    &__subheading{
+        margin:1rem auto;
+        font-size: 2rem;
+    }
+    &__subparagraph{
+        font-size:1.4rem;
+        font-weight: 300;
+    }
+}
+.grid{
+    display:grid;
+    grid-template-columns: repeat(auto-fit,minmax(20rem,1fr));
+   justify-content: center;
+   margin:10rem auto;
+   
+}
+.img-wrapper{
+    // width:100%;
+    img{
+        width:60%;
+    }
+}

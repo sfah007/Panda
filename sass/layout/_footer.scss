@@ -1,0 +1,41 @@
+.footer {
+  background-color: $color-black;
+  color: $color-white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  &__heading {
+    margin-top: 5rem;
+    margin-bottom: 2rem;
+    font-size: 3rem;
+  }
+  .call-to-action {
+    display: inline-block;
+    margin-bottom: 2rem;
+    padding: 1rem 4rem;
+  }
+  .social-media {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+    margin: 2rem auto 4rem auto;
+    a {
+      
+      svg {
+
+        width: 30%;
+        height: 30%;
+         fill: $color-white;
+
+         @include respond(phone){
+           width: 50%;
+        height: 50%;
+         }
+      }
+    }
+  }
+}
+.social-link svg {
+  fill: $color-white;
+}

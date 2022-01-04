@@ -1,0 +1,32 @@
+{
+  "name": "digital-agency",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.html",
+  "scripts": {
+    "start": "parcel index.html",
+    "build": "parcel build index.html",
+    "watch:sass": "node-sass sass/main.scss css/style.css -w",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "cleanup": "rm -rf .cache dist",
+    "dev": "npm run cleanup && parcel build ./index.html"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "cssnano": "^5.0.8",
+    "node-sass": "^6.0.1",
+    "parcel-bundler": "^1.12.5",
+    "parcel-plugin-static-files-copy": "^2.6.0",
+    "postcss": "^8.3.8"
+  },
+  "dependencies": {
+    "emailjs-com": "^3.2.0",
+    "joi-browser": "^13.4.0",
+    "vanilla-tilt": "^1.7.2"
+  },
+  "staticFiles": {
+    "staticPath": "lazy",
+    "watcherGlob": "**"
+  }
+}

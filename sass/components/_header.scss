@@ -1,0 +1,59 @@
+#header {
+  min-height: 100vh;
+  background-color: $color-white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.hero {
+  position: relative;
+  flex: 2;
+  z-index: 2;
+  color: $color-white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  &__heading {
+    font-size: 3.5rem;
+    margin-bottom: 1rem;
+  }
+  &__paragraph {
+    margin-bottom: 1.5rem;
+    font-size: 1.3rem;
+    @include respond(phone) {
+      font-size: 1.1rem;
+      width: 50%;
+    }
+  }
+}
+#visual {
+  position: absolute;
+  z-index: 1;
+  transform: translateY(-47%) scaleX(0.85) scaleY(0.8);
+  pointer-events: none;
+  top: 50%;
+  max-height: 100%;
+  @include respond(tab-land) {
+    transform: translateY(-47%) scale(0.85);
+  }
+  @include respond(tab-port) {
+    transform: translateY(-47%) scale(0.7);
+  }
+  @include respond(phone) {
+    transform: translateY(-47%) scaleY(0.5) scaleX(0.55);
+  }
+  @include respond(mini-phone) {
+    transform: translateY(-47%) scaleY(0.4) scaleX(0.33);
+    max-height: unset;
+  }
+}
+#blob1 {
+  fill: $color-black;
+  pointer-events: none;
+}
+#blob2 {
+  fill: $color-black;
+  pointer-events: none;
+}

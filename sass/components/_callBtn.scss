@@ -1,0 +1,16 @@
+.wrapper{
+    position: relative;
+}
+.call-to-action{
+    
+    // position: fixed;
+    transition: all .5s ease-in-out;
+    
+    font-size: 1.6rem;
+    padding:1rem 2rem;
+    background-color: $color-white;
+    color:$color-black;
+    border-radius: 28px;
+    cursor: pointer;
+    
+}

@@ -1,0 +1,59 @@
+.loading-model{
+    position: fixed;
+    height:100%;
+    width:100%;
+    top:0;
+    left:0;
+    z-index: 999;
+    background: var(--color-white);
+    transform:translateY(-200%);
+    animation:loading 3.5s cubic-bezier(.82,.01,1,-0.14) ;
+    // overflow: hidden;
+    
+}
+.panda-animation{
+    position: absolute;
+    top:50%;
+    left:50%;
+    transform:translate(-50%,-50%);
+    @include respond(phone){
+         transform:translate(-50%,-50%) scale(0.7);
+    }
+}
+
+.panda-animation path{
+    fill:#000;
+    stroke-width:.5;
+    stroke: black;
+    stroke-dasharray: 450;
+    stroke-dashoffset: 0;
+    animation: panda 3s backwards;
+}
+
+@keyframes panda {
+    0%{
+        fill:transparent;
+    stroke-dashoffset: 450;
+    }
+    40%{
+        fill:transparent;
+    stroke-dashoffset: 675;
+    }
+    80%{
+        stroke-dashoffset: 900;
+        fill:transparent;
+    }
+    100%{
+        stroke-dashoffset: 900;
+        fill:$color-black;
+    }
+}
+
+@keyframes loading {
+    0%{
+        transform:translateY(0)
+    }
+    100%{
+        transform: translateY(-100%);
+    }
+}
