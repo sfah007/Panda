@@ -30,7 +30,7 @@ body {
   scroll-behavior: smooth;
   color: $color-black;
   // overflow: hidden;
-  &.ar{
+  &.ar {
     font-family: "Cairo";
   }
 }
@@ -72,7 +72,7 @@ a {
   transform: translate(-50%, -50%);
   z-index: 10;
   pointer-events: none;
-  @include respond(tab-port){
+  @include respond(tab-port) {
     display: none;
   }
 }
@@ -80,6 +80,9 @@ a {
 section,
 footer {
   background: $color-white;
+}
+img {
+  height: auto;
 }
 .spacer {
   // background: url("/imgs/layered-waves-haikei.svg");

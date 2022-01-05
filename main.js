@@ -293,7 +293,7 @@ btnLang.addEventListener("click", (e) => {
   } else {
     btnMenu.classList.add("open");
   }
-  if (e.target.classList.contains("lang-change")) {
+  if (e.target.closest("div").classList.contains("lang-menu")) {
     if (language === "en") {
       language = "ar";
       textElements.forEach((ele, i) => {

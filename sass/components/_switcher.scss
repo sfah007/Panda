@@ -45,16 +45,20 @@
 .fa-sun {
   color: #f39c12;
 }
-
+.ar .lang-switcher{
+  margin-left: 3rem!important;
+}
 .lang-switcher {
   cursor: pointer;
   position: relative;
   margin-left: auto;
   font-size: 1.4rem;
+  white-space: nowrap;
   
  
   .main-lang{
     display: inline-block;
+    padding: 1rem;
   }
   .lang-menu{
     z-index: 3;

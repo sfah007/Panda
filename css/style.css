@@ -80,6 +80,9 @@ section,
 footer {
   background: var(--color-white); }
 
+img {
+  height: auto; }
+
 .spacer {
   aspect-ratio: 960/300;
   background-position: center;
@@ -297,14 +300,18 @@ footer {
 .fa-sun {
   color: #f39c12; }
 
+.ar .lang-switcher {
+  margin-left: 3rem !important; }
+
 .lang-switcher {
   cursor: pointer;
   position: relative;
   margin-left: auto;
   font-size: 1.4rem;
-  padding: 1rem; }
+  white-space: nowrap; }
   .lang-switcher .main-lang {
-    display: inline-block; }
+    display: inline-block;
+    padding: 1rem; }
   .lang-switcher .lang-menu {
     z-index: 3;
     opacity: 0.9;
@@ -329,7 +336,8 @@ footer {
   z-index: 999;
   background: var(--color-white);
   transform: translateY(-200%);
-  animation: loading 3.5s cubic-bezier(0.82, 0.01, 1, -0.14); }
+  animation: loading 3.5s cubic-bezier(0.82, 0.01, 1, -0.14);
+  display: none; }
 
 .panda-animation {
   position: absolute;
