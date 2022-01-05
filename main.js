@@ -218,7 +218,7 @@ form.addEventListener("submit", (e) => {
       radioValue = ele.id;
     }
   });
-  e.target.reset();
+  
   inputs.forEach(ele=>{
     ele.classList.remove("correct")
     ele.classList.remove("wrong")
@@ -231,7 +231,8 @@ form.addEventListener("submit", (e) => {
     replay_to: "djfj",
     message: messageInput.value,
   };
-
+  
+e.target.reset();
   emailjs.send("service_vktz1t9", "template_2nay408", templateParams).then(
     function (response) {
       console.log("SUCCESS!", response.status, response.text);
@@ -403,30 +404,4 @@ const slider = function () {
 };
 slider();
 
-
-// Lazy loading images
-const imgTargets = document.querySelectorAll('img[data-src]');
-
-const loadImg = function (entries, observer) {
-  const [entry] = entries;
-
-  if (!entry.isIntersecting) return;
-
-  // Replace src with data-src
-  entry.target.src = entry.target.dataset.src;
-
-  entry.target.addEventListener('load', function () {
-    entry.target.classList.remove('lazy-img');
-  });
-
-  observer.unobserve(entry.target);
-};
-
-const imgObserver = new IntersectionObserver(loadImg, {
-  root: null,
-  threshold: 0,
-  rootMargin: '0px',
-});
-
-imgTargets.forEach(img => imgObserver.observe(img));
 

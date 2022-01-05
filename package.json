@@ -24,9 +24,6 @@
     "emailjs-com": "^3.2.0",
     "joi-browser": "^13.4.0",
     "vanilla-tilt": "^1.7.2"
-  },
-  "staticFiles": {
-    "staticPath": "lazy",
-    "watcherGlob": "**"
   }
+  
 }

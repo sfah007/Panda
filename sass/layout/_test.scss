@@ -7,6 +7,9 @@
 
   /* IN THE END */
   overflow: hidden;
+  @include respond(phone){
+      max-width: 45rem;
+    }
 
 }
 
@@ -78,7 +81,9 @@
   margin-right: 1.75rem;
   cursor: pointer;
   transition: all 0.5s;
-
+@include respond(phone){
+      margin-bottom: 2rem;
+    }
   /* Only necessary when overlying images */
   /* box-shadow: 0 0.6rem 1.5rem rgba(0, 0, 0, 0.7); */
 }
@@ -110,6 +115,9 @@
   font-family: inherit;
   color: var(--color-primary);
   z-index: -1;
+  @include respond(phone){
+      font-size: 15rem;
+    }
 }
 .ar .testimonial::before{
     left:unset;
