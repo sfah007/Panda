@@ -17,7 +17,6 @@
     "cssnano": "^5.0.8",
     "node-sass": "^6.0.1",
     "parcel-bundler": "^1.12.5",
-    "parcel-plugin-static-files-copy": "^2.6.0",
     "postcss": "^8.3.8"
   },
   "dependencies": {
@@ -25,5 +24,4 @@
     "joi-browser": "^13.4.0",
     "vanilla-tilt": "^1.7.2"
   }
-  
 }
